@@ -24,8 +24,9 @@
     flex 1
     line-height 44px
     a
-      display inline-block
-      height 100%
+      // display inline-block
+      padding-bottom 5px
+      // height 100%
       border-bottom 2px solid transparent
       font-size $font-size-medium
       &.router-link-active

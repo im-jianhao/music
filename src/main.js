@@ -3,10 +3,10 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import FastClick from "fastclick";
+import "@/assets/stylus/index.styl";
+
 // 300ms延迟
 FastClick.attach(document.body);
-
-import "@/assets/stylus/index.styl";
 
 Vue.config.productionTip = false;
 
