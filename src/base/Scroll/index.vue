@@ -31,6 +31,7 @@ export default {
   computed: {
     // 如果需要监听scroll事件需要把probeType设置为3
     _probeType() {
+      console.log('git test');
       return this.listenScroll ? 3 : this.probeType;
     },
   },
