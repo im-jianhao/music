@@ -15,7 +15,7 @@
         <ul class="recommend-list">
           <li class="item" v-for="item in discList" :key="item.listennum">
             <div class="icon">
-              <img :src="item.imgurl" alt="" />
+              <img v-lazy="item.imgurl" alt="" />
             </div>
             <div class="text">
               <h2>{{ item.creator.name }}</h2>
@@ -31,10 +31,10 @@
 
 <script>
 import Scroll from "@/base/Scroll/";
-import { getDiscList } from "@/api/recommend";
-import { getSwiper } from "@/api/recommend";
+import { getSwiper, getDiscList } from "@/api/recommend";
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
+
 export default {
   components: {
     Swiper,
@@ -91,9 +91,6 @@ img
 .recomment
   flex 1
   overflow hidden
-  .wrapper
-    height 100%
-    overflow hidden
 .recommend-title
   color $color-theme
   font-size $font-size-large

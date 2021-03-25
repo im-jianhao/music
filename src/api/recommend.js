@@ -1,15 +1,11 @@
-import axios from "axios";
+import instance from "@/utils/http";
 
-const instance = axios.create({
-  baseURL:
-    process.env.NODE_ENV === "development" ? "" : "http://jhmgz.top:3389",
-  timeout: 3000,
-});
-
-export const getSwiper = () => {
+const getSwiper = () => {
   return instance.get("/api/banner");
 };
 
-export const getDiscList = () => {
+const getDiscList = () => {
   return instance.get("/api/getDiscList");
 };
+
+export { getSwiper, getDiscList };
